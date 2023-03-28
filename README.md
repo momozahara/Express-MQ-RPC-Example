@@ -7,7 +7,7 @@ Rename `.env.example` to `.env` and replace `SERVER_URL` with your own
 
 ## Debug
 
-For VSCode you can use [`compound`](./.vscode/launch.json#38) to build and start for both project in the same click
+For VSCode you can use [`compound`](./.vscode/launch.json#L38) to build and start for both project in the same click
 
 ## Structure
 
