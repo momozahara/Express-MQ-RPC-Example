@@ -65,7 +65,7 @@ export function callRpc(data: string, callback: (response: any) => void) {
             (msg) => {
               if (msg?.properties.correlationId === correlationId) {
                 callback(JSON.parse(msg.content.toString()));
-                pool.release(connection);
+                pool.destroy(connection);
               }
             },
             {
