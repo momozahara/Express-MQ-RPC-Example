@@ -74,7 +74,7 @@ export function callRpc(data: string, callback: (response: any) => void) {
             }
           );
 
-          channel.sendToQueue("rpc_queue", Buffer.from(data), {
+          channel.sendToQueue(process.env.QUEUE_NAME!, Buffer.from(data), {
             correlationId,
             replyTo: queue.queue,
           });

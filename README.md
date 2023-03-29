@@ -3,7 +3,7 @@ An example of Message Queue RPC using [`amqplib`](https://www.npmjs.com/package/
 
 ## Installation
 
-Rename `.env.example` to `.env` and replace `SERVER_URL` with your own
+Rename `.env.example` to `.env` and replace `SERVER_URL` and `QUEUE_NAME` with your own note that `QUEUE_NAME` on the same environment must be the exact same value
 
 ## Debug
 

@@ -13,11 +13,13 @@ amqp.connect(process.env.SERVER_URL!, (err, connection) => {
       throw err;
     }
 
-    channel.assertQueue("rpc_queue", {
+    channel.assertQueue(process.env.QUEUE_NAME!, {
       durable: false,
     });
     channel.prefetch(1);
-    channel.consume("rpc_queue", (msg) => messageHandler(msg, channel));
+    channel.consume(process.env.QUEUE_NAME!, (msg) =>
+      messageHandler(msg, channel)
+    );
   });
 });
 
